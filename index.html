@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gruzińska Uczta — Autentyczny Catering Gruziński | Siedlce</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/tprt532Q/652356260-2330776094095328-5820971127302888922-n.jpg" />
+  <link rel="apple-touch-icon" href="https://i.ibb.co/tprt532Q/652356260-2330776094095328-5820971127302888922-n.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* CSS Variables matching design guidelines */
+    :root {
+      --shadow-black: #120a05;
+      --black-deep: #0a0503;
+      --burgundy: #5c1a1a;
+      --burgundy-dark: #3d0f0f;
+      --burgundy-mid: #4d1515;
+      --red-georgian: #8b1a1a;
+      --terracotta: #c4603a;
+      --gold: #c9993a;
+      --gold-light: #e8b84a;
+      --amber: #d4892a;
+      --cream: #f7f0e3;
+      --parchment: #ede4d0;
+      --text-dark: #3a2a1a;
+      --text-muted: #6a5a4a;
+    }
+
+    /* Reset & Base elements */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--black-deep);
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Noise Texture Overlay */
+    .bg-noise {
+      position: relative;
+    }
+    .bg-noise::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    /* Light Sections (Parchment Styled) */
+    .bg-parchment-styled {
+      background-color: var(--cream);
+      color: var(--text-dark);
+      position: relative;
+    }
+    .bg-parchment-styled::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background: repeating-linear-gradient(171deg, rgba(180, 140, 80, 0.04) 0px, transparent 2px, transparent 28px);
+    }
+
+    /* Common Candlelight radial glow */
+    .candlelight-glow {
+      position: relative;
+    }
+    .candlelight-glow::after {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vw;
+      height: 80vw;
+      max-width: 800px;
+      max-height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 137, 42, 0.08) 0%, rgba(18, 10, 5, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Double line divider technique */
+    .border-double-cream {
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 5px var(--cream), 0 0 0 6px var(--gold);
+    }
+    
+    .border-double-burgundy {
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 5px var(--burgundy-dark), 0 0 0 6px var(--gold);
+    }
+
+    .border-double-shadow {
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 5px var(--shadow-black), 0 0 0 6px var(--gold);
+    }
+
+    .border-double-black-deep {
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 5px var(--black-deep), 0 0 0 6px var(--gold);
+    }
+
+    /* Global filters on food photography for warmth */
+    img.food-warmth {
+      filter: saturate(1.1) contrast(1.02) sepia(0.08);
+      transition: all 0.5s ease;
+    }
+
+    /* Layout Utility Classes */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .section-spacing {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    /* Flex / Grid Utilities */
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Link Style */
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    /* Buttons styling & Double Borders */
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 0;
+      text-align: center;
+    }
+
+    .btn-terracotta {
+      background-color: var(--terracotta);
+      color: var(--cream);
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 4px transparent, 0 0 0 5px var(--gold);
+    }
+    .btn-terracotta:hover {
+      background-color: #d46f48;
+      box-shadow: 0 0 0 4px var(--shadow-black), 0 0 0 5px var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-gold {
+      background-color: transparent;
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 4px transparent, 0 0 0 5px var(--gold);
+    }
+    .btn-outline-gold:hover {
+      background-color: rgba(201, 153, 58, 0.1);
+      box-shadow: 0 0 0 4px var(--shadow-black), 0 0 0 5px var(--gold-light);
+      color: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    /* Navigation bar styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(18, 10, 5, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201, 153, 58, 0.4);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .logo-container .brand-light {
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+    }
+
+    .logo-container .brand-bold {
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      position: relative;
+      padding-bottom: 0.4rem;
+      color: var(--cream);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Mobile Hamburger Menu icon */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      width: 100%;
+      height: 2px;
+      background-color: var(--gold);
+      transition: all 0.3s ease;
+    }
+
+    /* Complete Screen Overlay Mobile Menu */
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--shadow-black);
+      z-index: 105;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease;
+    }
+
+    .mobile-nav-overlay.open {
+      transform: translateY(0);
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .mobile-nav-links a {
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--cream);
+      display: block;
+    }
+
+    .mobile-nav-links a:hover {
+      color: var(--gold);
+    }
+
+    /* HERO Section */
+    #hero {
+      height: 100vh;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--shadow-black) 0%, rgba(10,5,3,0.95) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-image {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://i.ibb.co/N6gqbSHX/684439020-122111486846966471-5706248558826859455-n.jpg') no-repeat center center;
+      background-size: cover;
+      transform: scale(1.03);
+      filter: saturate(1.1) contrast(1.05);
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(ellipse at 60% 40%, rgba(18,10,5,0.45) 0%, rgba(18,10,5,0.92) 85%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .ornament-flanked {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--gold);
+    }
+
+    .ornament-line {
+      width: 40px;
+      height: 1px;
+      background-color: var(--gold);
+    }
+
+    .hero-title-first {
+      font-size: clamp(3.5rem, 9vw, 7.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title-second {
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: -0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-divider {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-divider span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--gold);
+    }
+
+    .hero-tagline {
+      font-size: 1.35rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtag {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(247, 240, 227, 0.6);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    /* Organic bottom transition for hero */
+    .organic-divider-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      z-index: 10;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .organic-divider-bottom svg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      fill: var(--cream);
+    }
+
+    /* Section divider design elements */
+    .section-divider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      padding: 2.5rem 0;
+    }
+
+    .section-divider-side {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .section-divider-line {
+      width: 60px;
+      height: 1px;
+      background-color: var(--gold);
+      opacity: 0.75;
+    }
+
+    .section-divider-ornament {
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Section Typography Header */
+    .section-header-box {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.3;
+    }
+    .light-section-title {
+      color: var(--text-dark);
+    }
+    .dark-section-title {
+      color: var(--cream);
+    }
+
+    .section-subtext-light {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .section-subtext-dark {
+      font-size: 1rem;
+      color: rgba(247, 240, 227, 0.65);
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    /* O NAS Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-left-composition {
+      position: relative;
+      padding: 2rem;
+    }
+
+    .about-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: visible;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.1) contrast(1.02) sepia(0.2);
+    }
+
+    /* Overlapping label card bottom left */
+    .about-label-badge {
+      position: absolute;
+      bottom: -15px;
+      left: -15px;
+      background-color: var(--cream);
+      padding: 10px 18px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--gold);
+      box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-label-badge span {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--burgundy);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* Overlay grape upper right */
+    .about-grape-badge {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      z-index: 10;
+      color: var(--gold);
+      background-color: var(--cream);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--gold);
+    }
+
+    .about-text-content {
+      padding-left: 1rem;
+    }
+
+    .about-body {
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--text-dark);
+      margin-bottom: 2.5rem;
+      text-align: justify;
+    }
+
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 1.2rem;
+      border-left: 2px solid var(--burgundy);
+      padding-left: 1.2rem;
+    }
+
+    .feature-icon-text {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .feature-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin-bottom: 0.2rem;
+    }
+
+    .feature-description {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* KUCHNIA GRUZIŃSKA / MENU Section */
+    #menu {
+      background-color: var(--burgundy);
+      position: relative;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .menu-card {
+      background-color: var(--burgundy-dark);
+      padding: 3rem 2.5rem;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .menu-card-ornament {
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-card-title {
+      font-size: 1.6rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    .menu-card-description {
+      font-size: 0.95rem;
+      color: rgba(247, 240, 227, 0.75);
+      line-height: 1.8;
+    }
+
+    /* Hover effect for cards */
+    .menu-card:hover {
+      background-color: var(--burgundy-mid);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(201, 153, 58, 0.3) !important;
+      border-color: var(--gold-light);
+    }
+
+    .menu-card:hover .menu-card-ornament {
+      color: var(--gold-light);
+    }
+
+    .menu-note {
+      text-align: center;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: rgba(247, 240, 227, 0.55);
+    }
+
+    /* GALERIA Section */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 240px;
+      gap: 12px;
+    }
+
+    /* Spanning configurations */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .span-2-2 {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 492px; /* 240*2 + 12 */
+    }
+
+    .span-1-2 {
+      grid-row: span 2;
+      height: 492px;
+    }
+
+    .span-2-1 {
+      grid-column: span 2;
+      height: 240px;
+    }
+
+    /* Gallery card overlay & hover response */
+    .gallery-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(92, 26, 26, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      background-color: rgba(92, 26, 26, 0.45);
+      opacity: 1;
+      border-color: var(--gold);
+    }
+
+    .gallery-icon-center {
+      color: var(--cream);
+      padding: 1rem;
+      border: 1px solid rgba(247, 240, 227, 0.5);
+      background-color: rgba(18, 10, 5, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0.8);
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-icon-center {
+      transform: scale(1);
+    }
+
+    /* OPINIE / REVIEWS Section */
+    #reviews {
+      background-color: var(--shadow-black);
+      position: relative;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+      margin-bottom: 4rem;
+    }
+
+    .review-card {
+      background-color: #1e0a0a;
+      padding: 3.5rem 2.5rem;
+      position: relative;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      border-color: var(--gold);
+    }
+
+    .quote-icon-decor {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 5.5rem;
+      color: var(--gold);
+      opacity: 0.15;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-cross-decor {
+      position: absolute;
+      bottom: 1.2rem;
+      right: 1.2rem;
+      color: var(--gold);
+      opacity: 0.25;
+    }
+
+    .stars-row {
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.1em;
+    }
+
+    .review-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--cream);
+      margin-bottom: 2rem;
+      z-index: 2;
+    }
+
+    .review-source {
+      font-size: 0.8rem;
+      color: rgba(247, 240, 227, 0.5);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .reviews-cta-container {
+      text-align: center;
+    }
+
+    /* KONTAKT Section */
+    #contact {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-split-grid {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      min-height: 550px;
+    }
+
+    /* LEFT Column: Burgundy Wine styling */
+    .contact-left {
+      background-color: var(--burgundy);
+      padding: 6rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Huge faint Georgian script decor horizontally/vertically aligned */
+    .huge-georgian-decor {
+      position: absolute;
+      right: 5%;
+      bottom: 50%;
+      transform: translateY(50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 8rem;
+      color: rgba(247, 240, 227, 0.035);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      line-height: 1;
+      z-index: 1;
+    }
+
+    .contact-left-content {
+      position: relative;
+      z-index: 3;
+      max-width: 500px;
+    }
+
+    .contact-info-phone {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--gold);
+      line-height: 1.2;
+      display: inline-block;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info-phone:hover {
+      color: var(--gold-light);
+    }
+
+    .contact-info-divider {
+      width: 60px;
+      height: 1.5px;
+      background-color: var(--gold);
+      margin: 1.2rem 0;
+      opacity: 0.7;
+    }
+
+    .contact-info-email {
+      font-size: 1.1rem;
+      color: var(--cream);
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .contact-info-email:hover {
+      color: var(--gold);
+    }
+
+    .contact-info-location {
+      font-size: 0.95rem;
+      color: rgba(247, 240, 227, 0.6);
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-link-fb {
+      align-self: flex-start;
+    }
+
+    /* RIGHT Column: Parchment diagonal overlay styling */
+    .contact-right {
+      background-color: var(--cream);
+      color: var(--text-dark);
+      padding: 6rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 5;
+    }
+
+    .contact-right-box {
+      text-align: center;
+      max-width: 440px;
+    }
+
+    .contact-brand-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--burgundy);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-scope-list {
+      font-size: 0.95rem;
+      line-height: 2.4;
+      color: var(--text-dark);
+      font-weight: 400;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-scope-cross-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--black-deep);
+      position: relative;
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-top-rule {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .footer-col:not(:last-child) {
+      border-right: 1px solid rgba(201, 153, 58, 0.25);
+    }
+
+    .footer-col-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-col-desc {
+      font-size: 0.85rem;
+      color: rgba(247, 240, 227, 0.45);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col-location {
+      font-size: 0.9rem;
+      color: var(--cream);
+      margin-top: 0.5rem;
+    }
+
+    .footer-cross-icon {
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col-phone {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-col-email {
+      font-size: 0.9rem;
+      color: rgba(247, 240, 227, 0.55);
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-col-fb {
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+
+    .footer-col-fb:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-dishes-list {
+      font-size: 0.75rem;
+      color: rgba(247, 240, 227, 0.35);
+      line-height: 2.2;
+      max-width: 250px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201, 153, 58, 0.15);
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    .footer-copyright {
+      font-size: 0.7rem;
+      color: rgba(247, 240, 227, 0.2);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Interactive Lightbox / Modal Styling */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(10, 5, 3, 0.98);
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content-box {
+      max-width: 90%;
+      max-height: 85%;
+      position: relative;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      box-shadow: 0 0 35px rgba(0,0,0,0.6);
+      border: 1px solid var(--gold);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: var(--cream);
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+    }
+
+    .lightbox-close:hover {
+      color: var(--gold);
+    }
+
+    /* Scroll Animation Effects setup */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger delay classes for grid items */
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.18s; }
+    .stagger-3 { transition-delay: 0.26s; }
+    .stagger-4 { transition-delay: 0.34s; }
+    .stagger-5 { transition-delay: 0.42s; }
+    .stagger-6 { transition-delay: 0.5s; }
+    .stagger-7 { transition-delay: 0.58s; }
+    .stagger-8 { transition-delay: 0.66s; }
+    .stagger-9 { transition-delay: 0.74s; }
+
+    /* Media Queries for responsive density */
+    @media (max-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+      .about-left-composition {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-split-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-right {
+        clip-path: none;
+        padding: 5rem 2rem;
+      }
+      .contact-left {
+        padding: 5rem 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .section-spacing {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+      }
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+      }
+      .span-2-2 {
+        grid-column: span 2;
+        grid-row: span 1;
+        height: 200px;
+      }
+      .span-1-2 {
+        grid-row: span 1;
+        height: 200px;
+      }
+      .span-2-1 {
+        grid-column: span 2;
+        height: 200px;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(201, 153, 58, 0.2);
+        padding-bottom: 2.5rem;
+      }
+      .hero-ctas {
+        gap: 1.5rem;
+      }
+    }
+
+    /* Accessibility preference */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .gallery-item img, .btn, .menu-card {
+        transition: none !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-noise">
+
+  <!-- NAVIGATION BAR -->
+  <header>
+    <div class="nav-container">
+      <a href="#hero" class="logo-container" id="nav-logo">
+        <!-- Inline Georgian Bolnisi Cross SVG (small) -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="footer-cross-icon" style="margin: 0; color: var(--gold);">
+          <rect x="10" y="0" width="4" height="24" fill="currentColor"/>
+          <rect x="0" y="10" width="24" height="4" fill="currentColor"/>
+          <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span>
+          <span class="brand-light">Gruzińska</span>
+          <span class="brand-bold">Uczta</span>
+        </span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li><a href="#about" id="nav-link-about">O nas</a></li>
+        <li><a href="#menu" id="nav-link-menu">Kuchnia</a></li>
+        <li><a href="#gallery" id="nav-link-gallery">Galeria</a></li>
+        <li><a href="#reviews" id="nav-link-reviews">Opinie</a></li>
+        <li><a href="#contact" id="nav-link-contact">Kontakt</a></li>
+      </ul>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Menu nawigacyjne">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Complete Screen Overlay Nav for Mobile -->
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <ul class="mobile-nav-links">
+      <!-- Miniature cross ornament above link list -->
+      <li style="color: var(--gold); margin-bottom: 1rem; display: flex; justify-content: center;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="10" y="0" width="4" height="24"/>
+          <rect x="0" y="10" width="24" height="4"/>
+          <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </li>
+      <li><a href="#about" class="mob-link">O nas</a></li>
+      <li><a href="#menu" class="mob-link">Kuchnia</a></li>
+      <li><a href="#gallery" class="mob-link">Galeria</a></li>
+      <li><a href="#reviews" class="mob-link">Opinie</a></li>
+      <li><a href="#contact" class="mob-link">Kontakt</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="candlelight-glow" style="position: absolute; width: 100%; height: 100%; z-index: 1;"></div>
+    
+    <div class="hero-content">
+      <div class="ornament-flanked">
+        <span class="ornament-line"></span>
+        <!-- Inline Georgian Cross -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="10" y="0" width="4" height="24"/>
+          <rect x="0" y="10" width="24" height="4"/>
+          <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <span class="ornament-line"></span>
+      </div>
+
+      <h1 class="hero-title-first">Gruzińska</h1>
+      <h2 class="hero-title-second">Uczta</h2>
+
+      <div class="hero-divider">
+        <span></span>
+        <span></span>
+      </div>
+
+      <p class="hero-tagline">Autentyczna kuchnia i smaki Gruzji</p>
+      <p class="hero-subtag">Catering · Siedlce</p>
+
+      <div class="hero-ctas">
+        <a href="tel:539539340" class="btn btn-terracotta" id="hero-btn-phone">Zadzwoń: 539 539 340</a>
+        <a href="mailto:gruzinskauczta@gmail.com" class="btn btn-outline-gold" id="hero-btn-email">Napisz do nas</a>
+      </div>
+
+      <!-- Tiny decorative row of three grape clusters -->
+      <div style="display: flex; justify-content: center; gap: 12px; color: rgba(247, 240, 227, 0.4);">
+        <svg width="14" height="15" viewBox="0 0 20 22" fill="currentColor">
+          <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+        </svg>
+        <svg width="14" height="15" viewBox="0 0 20 22" fill="currentColor">
+          <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+        </svg>
+        <svg width="14" height="15" viewBox="0 0 20 22" fill="currentColor">
+          <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Organic wave / transition down to about section -->
+    <div class="organic-divider-bottom">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+        <path d="M0,40 L1440,40 L1440,0 C1200,30 900,40 720,40 C540,40 240,30 0,0 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- O NAS (About) SECTION -->
+  <section id="about" class="bg-parchment-styled bg-noise section-spacing" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Frame layout LEFT -->
+        <div class="about-left-composition reveal">
+          <div class="about-frame border-double-cream">
+            <img src="https://i.ibb.co/RRm1mMB/700854267-122113280966966471-3675055434968431219-n.jpg" alt="Tradycyjna potrawa gruzińska" class="about-img food-warmth" id="about-intro-img" />
+            
+            <!-- Floating badges -->
+            <div class="about-label-badge" id="about-badge-location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color: var(--gold);">
+                <rect x="10" y="0" width="4" height="24"/>
+                <rect x="0" y="10" width="24" height="4"/>
+                <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+              </svg>
+              <span>Siedlce · Polska</span>
+            </div>
+
+            <div class="about-grape-badge" id="about-badge-grape">
+              <svg width="14" height="16" viewBox="0 0 20 22" fill="currentColor">
+                <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text content RIGHT -->
+        <div class="about-text-content reveal">
+          <div class="section-label" style="justify-content: flex-start;">
+            <svg width="16" height="18" viewBox="0 0 20 22" fill="currentColor">
+              <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+            </svg>
+            <span>O nas</span>
+          </div>
+
+          <h2 class="section-title light-section-title" style="margin-bottom: 2rem;">Smaki, które przywołują Gruzję.</h2>
+          
+          <p class="about-body">
+            Gruzińska Uczta to wyjątkowa oferta cateringowa, która przenosi autentyczne smaki Gruzji prosto na Twój stół. Specjalizujemy się w tradycyjnej kuchni gruzińskiej — pełnej aromatycznych przypraw, ciepłych chaczapuri, soczystych chinkali i bogato zestawionych sałatek. Każde danie przygotowujemy z sercem i szacunkiem do tradycji, używając oryginalnych receptur i najlepszych składników.
+          </p>
+
+          <!-- Feature items with left-rule border -->
+          <div class="features-list">
+            <div class="feature-item">
+              <div>
+                <h3 class="feature-title">Autentyczne receptury</h3>
+                <p class="feature-description">Tradycyjne przepisy przekazywane z pokolenia na pokolenie, wzbogacone oryginalnymi gruzińskimi przyprawami.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div>
+                <h3 class="feature-title">Dostawa na czas</h3>
+                <p class="feature-description">Terminowa dostawa na terenie Siedlec i okolic — jedzenie dociera zawsze świeże, pachnące i idealnie gorące.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div>
+                <h3 class="feature-title">Catering na każdą okazję</h3>
+                <p class="feature-description">Urodziny, przyjęcia rodzinne, spotkania biznesowe czy biesiady — przygotujemy menu szyte na miarę Twoich gości.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION DIVIDER -->
+  <div class="bg-parchment-styled bg-noise" style="padding: 0 0.5rem;">
+    <div class="container">
+      <div class="section-divider-container">
+        <div class="section-divider-side">
+          <span class="section-divider-line"></span>
+          <span class="section-divider-line" style="width: 20px;"></span>
+        </div>
+        <div class="section-divider-ornament">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="10" y="0" width="4" height="24"/>
+            <rect x="0" y="10" width="24" height="4"/>
+            <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="section-divider-side">
+          <span class="section-divider-line" style="width: 20px;"></span>
+          <span class="section-divider-line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU / SPECIALTIES SECTION -->
+  <section id="menu" class="bg-noise section-spacing candlelight-glow">
+    <div class="container text-center">
+      
+      <div class="section-header-box reveal">
+        <div class="section-label">
+          <svg width="16" height="18" viewBox="0 0 20 22" fill="currentColor">
+            <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+          </svg>
+          <span>Kuchnia Gruzińska</span>
+        </div>
+        <h2 class="section-title dark-section-title">Smaki, których nie zapomnisz</h2>
+        <p class="section-subtext-dark">Autentyczne potrawy z serca Gruzji</p>
+      </div>
+
+      <!-- 3x3 Grid of specialty cards -->
+      <div class="menu-grid">
+        
+        <!-- Card 1 -->
+        <div class="menu-card border-double-burgundy reveal stagger-1" id="menu-item-1">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Chaczapuri imeretyńskie</h3>
+          <p class="menu-card-description">
+            Puszysty placek wypełniony gruzińskim serem.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="menu-card border-double-burgundy reveal stagger-2" id="menu-item-2">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Odżachuri z kurczakiem</h3>
+          <p class="menu-card-description">
+            Grillowany kurczak z ziemniakami i gruzińskimi przyprawami.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="menu-card border-double-burgundy reveal stagger-3" id="menu-item-3">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Czachochbili</h3>
+          <p class="menu-card-description">
+            Duszony kurczak w aromatycznym sosie pomidorowym z cebulą, czosnkiem i świeżymi ziołami.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="menu-card border-double-burgundy reveal stagger-4" id="menu-item-4">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Gruzińska sałatka z ogórków i pomidorów</h3>
+          <p class="menu-card-description">
+            Ze świeżymi warzywami, orzechami włoskimi i gruzińskimi przyprawami.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="menu-card border-double-burgundy reveal stagger-5" id="menu-item-5">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Sałatka z czerwonej fasoli</h3>
+          <p class="menu-card-description">
+            Z sosem z orzechów włoskich, czosnkiem i aromatycznymi przyprawami. Tradycyjny smak Gruzji.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="menu-card border-double-burgundy reveal stagger-6" id="menu-item-6">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Bakłażany zapiekane z mięsem i serem</h3>
+          <p class="menu-card-description">
+            Delikatny bakłażan, aromatyczne mięso i ciągnący się ser zapiekane na złoty kolor. Pyszne i sycące danie w gruzińskim stylu.
+          </p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="menu-card border-double-burgundy reveal stagger-7" id="menu-item-7">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Żeberka wieprzowe w sosie adżika</h3>
+          <p class="menu-card-description">
+            Duszone w aromatycznym sosie pomidorowym z gruzińską pastą adżika. Miękkie, soczyste i pełne smaku.
+          </p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="menu-card border-double-burgundy reveal stagger-8" id="menu-item-8">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Kurczak z adżiką</h3>
+          <p class="menu-card-description">
+            Smażony kurczak z aromatyczną gruzińską pastą z papryki, czosnku i przypraw. Lekko pikantny i bardzo soczysty.
+          </p>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="menu-card border-double-burgundy reveal stagger-9" id="menu-item-9">
+          <div class="menu-card-ornament">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Gruzińskie sosy</h3>
+          <p class="menu-card-description">
+            Satsebeli
+          </p>
+        </div>
+
+      </div>
+
+      <p class="menu-note reveal">
+        * Menu każdorazowo dostosowujemy wyjątkowo do potrzeb, budżetu oraz wielkości planowanego przyjęcia — skontaktuj się, by ustalić szczegóły.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- SECTION DIVIDER -->
+  <div style="background-color: var(--black-deep); padding: 0 0.5rem;">
+    <div class="container">
+      <div class="section-divider-container">
+        <div class="section-divider-side">
+          <span class="section-divider-line"></span>
+          <span class="section-divider-line" style="width: 20px;"></span>
+        </div>
+        <div class="section-divider-ornament">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="10" y="0" width="4" height="24"/>
+            <rect x="0" y="10" width="24" height="4"/>
+            <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="section-divider-side">
+          <span class="section-divider-line" style="width: 20px;"></span>
+          <span class="section-divider-line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALERIA (Gallery) SECTION -->
+  <section id="gallery" class="bg-parchment-styled bg-noise section-spacing">
+    <div class="container">
+      
+      <div class="section-header-box reveal">
+        <div class="section-label">
+          <svg width="16" height="18" viewBox="0 0 20 22" fill="currentColor">
+            <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+          </svg>
+          <span>Galeria Smaków</span>
+        </div>
+        <h2 class="section-title light-section-title">Uczta dla oczu i podniebienia</h2>
+      </div>
+
+      <!-- Asymmetric grid -->
+      <div class="gallery-grid">
+        
+        <!-- F1 (Spans col 1-2, row 1-2) -->
+        <div class="gallery-item span-2-2 border-double-cream reveal stagger-1" data-image-index="1">
+          <img src="https://i.ibb.co/N6gqbSHX/684439020-122111486846966471-5706248558826859455-n.jpg" alt="Gruzińskie pierogi chinkali" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+        <!-- F2 -->
+        <div class="gallery-item border-double-cream reveal stagger-2" data-image-index="2">
+          <img src="https://i.ibb.co/RRm1mMB/700854267-122113280966966471-3675055434968431219-n.jpg" alt="Chlebki gruzińskie chaczapuri" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+        <!-- F3 (Spans col 4, row 1-2) -->
+        <div class="gallery-item span-1-2 border-double-cream reveal stagger-3" data-image-index="3">
+          <img src="https://i.ibb.co/qMtqgnwW/700907951-122113280924966471-102114088280370464-n.jpg" alt="Aromatyczny grill gruziński" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+        <!-- F4 -->
+        <div class="gallery-item border-double-cream reveal stagger-4" data-image-index="4">
+          <img src="https://i.ibb.co/LDVZZS6x/700506902-122113280882966471-5570774151586006363-n.jpg" alt="Roladki z bakłażana badridżani" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+        <!-- F5 (Spans col 2-3, row 2) / Adjusting dynamically -->
+        <div class="gallery-item span-2-1 border-double-cream reveal stagger-5" data-image-index="5">
+          <img src="https://i.ibb.co/rRbMZdsM/700625537-122113280828966471-8723650297973533276-n.jpg" alt="Tradycyjne chaczapuri adżaruli" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+        <!-- F6 (Spans col 1-2, row 3) -->
+        <div class="gallery-item span-2-1 border-double-cream reveal stagger-6" data-image-index="6">
+          <img src="https://i.ibb.co/r2dvTS1D/700155133-122113280726966471-3258244833220171709-n.jpg" alt="Plastry grillowanych dań" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+        <!-- F7 (Spans col 3-4, row 3) -->
+        <div class="gallery-item span-2-1 border-double-cream reveal stagger-3" data-image-index="7">
+          <img src="https://i.ibb.co/q3mL1Fcy/705968913-122114037812966471-1220846989156176382-n.jpg" alt="Stół obfity w gruzińskie wędliny" class="food-warmth" loading="lazy" />
+          <div class="gallery-overlay">
+            <div class="gallery-icon-center">
+              Powiększ smak
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION DIVIDER -->
+  <div style="background-color: var(--black-deep); padding: 0 0.5rem;">
+    <div class="container">
+      <div class="section-divider-container">
+        <div class="section-divider-side">
+          <span class="section-divider-line"></span>
+          <span class="section-divider-line" style="width: 20px;"></span>
+        </div>
+        <div class="section-divider-ornament">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="10" y="0" width="4" height="24"/>
+            <rect x="0" y="10" width="24" height="4"/>
+            <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="section-divider-side">
+          <span class="section-divider-line" style="width: 20px;"></span>
+          <span class="section-divider-line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPINIE (Reviews) SECTION -->
+  <section id="reviews" class="bg-noise section-spacing candlelight-glow">
+    <div class="container">
+      
+      <div class="section-header-box reveal">
+        <div class="section-label">
+          <svg width="16" height="18" viewBox="0 0 20 22" fill="currentColor">
+            <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+          </svg>
+          <span>Opinie Klientów</span>
+        </div>
+        <h2 class="section-title dark-section-title">Co mówią nasi goście</h2>
+      </div>
+
+      <div class="reviews-grid">
+        
+        <!-- Review 1 -->
+        <div class="review-card border-double-burgundy reveal stagger-1" id="review-1">
+          <span class="quote-icon-decor">“</span>
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="review-text">
+              "Przepyszne jedzenie w dużych ilościach, bardzo serdecznie polecam każdemu."
+            </p>
+          </div>
+          <div class="review-source">— Opinia z Facebooka</div>
+          
+          <!-- Small corner cross decor -->
+          <div class="review-cross-decor">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card border-double-burgundy reveal stagger-2" id="review-2">
+          <span class="quote-icon-decor">“</span>
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="review-text">
+              "Polecam super jedzenie. Dostawa na czas."
+            </p>
+          </div>
+          <div class="review-source">— Opinia z Facebooka</div>
+
+          <div class="review-cross-decor">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card border-double-burgundy reveal stagger-3" id="review-3">
+          <span class="quote-icon-decor">“</span>
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="review-text">
+              "Bardzo dobre, wyjątkowe. Zawsze chciałam spróbować gruzińskich potraw, skuszona opiniami innych i nie zawiodłam się. Z całego serca polecam."
+            </p>
+          </div>
+          <div class="review-source">— Opinia z Facebooka</div>
+
+          <div class="review-cross-decor">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reviews-cta-container reveal">
+        <a href="https://www.facebook.com/gruzinskauczta/reviews/?id=61578994142984&sk=reviews" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold" style="border-color: var(--terracotta); color: var(--gold-light);" id="reviews-fb-link">
+          Zobacz więcej opinii na Facebooku →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION DIVIDER -->
+  <div style="background-color: var(--black-deep); padding: 0 0.5rem;">
+    <div class="container">
+      <div class="section-divider-container">
+        <div class="section-divider-side">
+          <span class="section-divider-line"></span>
+          <span class="section-divider-line" style="width: 20px;"></span>
+        </div>
+        <div class="section-divider-ornament">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="10" y="0" width="4" height="24"/>
+            <rect x="0" y="10" width="24" height="4"/>
+            <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="section-divider-side">
+          <span class="section-divider-line" style="width: 20px;"></span>
+          <span class="section-divider-line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KONTAKT (Contact) SECTION -->
+  <section id="contact">
+    <div class="contact-split-grid">
+      
+      <!-- LEFT Burgundy side -->
+      <div class="contact-left bg-noise">
+        <div class="huge-georgian-decor">ГРУЗІЯ</div>
+        
+        <div class="contact-left-content reveal">
+          <div class="section-label" style="justify-content: flex-start; color: var(--gold-light);">
+            <svg width="16" height="18" viewBox="0 0 20 22" fill="currentColor">
+              <circle cx="10" cy="14" r="3.5"/><circle cx="5" cy="10" r="3.5"/><circle cx="15" cy="10" r="3.5"/><circle cx="10" cy="6" r="3"/>
+            </svg>
+            <span>Kontakt</span>
+          </div>
+
+          <h2 class="section-title dark-section-title" style="margin-bottom: 1rem;">Zapraszamy do uczty</h2>
+          <p style="color: rgba(247,240,227,0.7); font-style: italic; font-size: 0.95rem; margin-bottom: 2rem;">
+            Zadzwoń lub napisz — przygotujemy doskonałą ofertę cateringową dla Ciebie i Twoich gości.
+          </p>
+
+          <a href="tel:539539340" class="contact-info-phone" id="contact-phone">539 539 340</a>
+          
+          <div class="contact-info-divider"></div>
+          
+          <a href="mailto:gruzinskauczta@gmail.com" class="contact-info-email" id="contact-email">gruzinskauczta@gmail.com</a>
+          
+          <p class="contact-info-location">Siedlce i okolice (województwo mazowieckie)</p>
+
+          <a href="https://www.facebook.com/gruzinskauczta/" target="_blank" rel="noopener noreferrer" class="btn btn-terracotta contact-link-fb" id="contact-fb-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+            Gruzińska Uczta na Facebooku
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT Parchment side with elegant block -->
+      <div class="contact-right bg-parchment-styled bg-noise">
+        <div class="contact-right-box reveal">
+          
+          <!-- Elaborate central Bolnisi cross gold -->
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor" style="color: var(--gold); margin: 0 auto;">
+            <!-- Georgian cross with small flare extensions and design -->
+            <rect x="11" y="0" width="2" height="24"/>
+            <rect x="0" y="11" width="24" height="2"/>
+            <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="12" cy="5" r="1.5"/>
+            <circle cx="12" cy="19" r="1.5"/>
+            <circle cx="5" cy="12" r="1.5"/>
+            <circle cx="19" cy="12" r="1.5"/>
+          </svg>
+
+          <h3 class="contact-brand-title">Gruzińska Uczta</h3>
+          
+          <div class="contact-info-divider" style="margin: 1.5rem auto; float: none;"></div>
+
+          <p class="contact-scope-list">
+            CATERING GRUZIŃSKI KK<br/>
+            <strong>Wypieki:</strong> Chaczapuri · Lawasz · Słodkości<br/>
+            <strong>Dania gorące:</strong> Chinkali · Mtswadi · Lulakebab<br/>
+            <strong>Przekąski:</strong> Badridżani · Pchali · Sosy kaukaskie<br/>
+            <strong>Dostawa:</strong> Siedlce, Mińsk Mazowiecki, Łuków i okolice
+          </p>
+
+          <div class="contact-scope-cross-row">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="10" y="0" width="4" height="24"/><rect x="0" y="10" width="24" height="4"/></svg>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="10" y="0" width="4" height="24"/><rect x="0" y="10" width="24" height="4"/></svg>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="10" y="0" width="4" height="24"/><rect x="0" y="10" width="24" height="4"/></svg>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top-rule">
+      <div class="section-divider-container" style="padding: 0; opacity: 0.3;">
+        <div style="height: 1px; width: 100%; background-color: var(--gold);"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1 -->
+        <div class="footer-col" id="footer-col-1">
+          <h4 class="footer-col-title">Gruzińska Uczta</h4>
+          <p class="footer-col-desc">Autentyczna kuchnia i tradycja gruzińska.</p>
+          <p class="footer-col-location">Siedlce, Polska</p>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col" id="footer-col-2">
+          <div class="footer-cross-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="10" y="0" width="4" height="24"/>
+              <rect x="0" y="10" width="24" height="4"/>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <p class="footer-col-phone">539 539 340</p>
+          <p class="footer-col-email">gruzinskauczta@gmail.com</p>
+          <a href="https://www.facebook.com/gruzinskauczta/" target="_blank" rel="noopener noreferrer" class="footer-col-fb" id="footer-fb-link">Facebook Profile</a>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col" id="footer-col-3">
+          <div class="footer-dishes-list">
+            Chinkali · Chaczapuri · Mtswadi · Badridżani · Pchali · Lobio · Lawasz · Pierogi · Catering Siedlce · Tradycja Kaukazu
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 Gruzińska Uczta — Catering Gruziński | Siedlce. Wszelkie prawa zastrzeżone.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Gallery Popup Modal -->
+  <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close" id="lightbox-close-btn">
+        <span>Zamknij</span> ×
+      </button>
+      <img src="" alt="Gruzińskie Pyszności Powiększenie" class="lightbox-img" id="lightbox-img" />
+    </div>
+  </div>
+
+  <!-- VANILLA JAVASCRIPT -->
+  <script>
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobLinks = document.querySelectorAll('.mob-link');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+      const isOpen = mobileNav.classList.contains('open');
+      
+      // Animate lines
+      const spans = hamburgerBtn.querySelectorAll('span');
+      if (isOpen) {
+        spans[0].style.transform = 'translateY(8px) rotate(45deg)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    // Close mobile nav on overlay link click
+    mobLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        const spans = hamburgerBtn.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      });
+    });
+
+    // Gallery Lightbox functionality
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('gallery-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imgElement = item.querySelector('img');
+        if (imgElement) {
+          lightboxImg.src = imgElement.src;
+          lightboxImg.alt = imgElement.alt;
+          lightbox.classList.add('active');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // Restore background scrolling
+    }
+
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    
+    // Close lightbox on clicking outside content area
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // ESC key closes lightbox modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+
+    // IntersectionObserver scroll animations
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // Runs animation only once
+        }
+      });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+      root: null, // viewport
+      threshold: 0.12, // triggers when 12% is visible
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+</html>

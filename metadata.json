@@ -1,0 +1,6 @@
+{
+  "name": "Gruzińska Uczta",
+  "description": "Autentyczna kuchnia i catering gruziński w Siedlcach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
